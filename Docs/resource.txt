@@ -1,0 +1,44 @@
+Youtube
+    How to Split a Video in PHP with the help of FFMPEG
+        https://www.youtube.com/watch?v=3n-Y8wvYxFQ
+    How to Encrypt HLS Content with FFmpeg
+        https://www.youtube.com/watch?v=TQ_BX1Su0qc
+    How to Install OpenSSL on windows 10 64-bit
+        https://www.youtube.com/watch?v=jSkQ27sTto0
+
+download
+    https://ffmpeg.org/
+    https://www.gyan.dev/ffmpeg/builds/
+    https://slproweb.com/products/Win32OpenSSL.html
+
+env variables
+    C:\FFmpeg\bin\
+    C:\Program Files\OpenSSL-Win64\bin
+
+Server Link
+    http://localhost/FFmpeg-Streamings/main/hls/ch_1/index.m3u8
+    https://covidawareness.ca/hls/main/hls/ch_1/index.m3u8
+Google Search
+  https://opensource.com/article/17/6/ffmpeg-convert-media-file-formats
+  https://docs.peer5.com/guides/production-ready-hls-vod/
+  https://ffmpeg.org/ffmpeg-formats.html#hls-2
+
+Tutorial
+    Key info file format:
+        key URI
+        key file path
+        IV (optional)
+
+    Example key URIs:
+        http://server/file.key
+        /path/to/file.key
+        file.key
+
+    Example key file paths:
+        file.key
+        /path/to/file.key
+
+bash commands
+    d main/hls
+    cd ..
+

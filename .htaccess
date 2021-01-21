@@ -1,0 +1,9 @@
+RewriteEngine on 
+RewriteCond %{HTTP_REFERER} !^http://(www\.)?domain\.ltd [NC] 
+RewriteCond %{HTTP_REFERER} !^http://(www\.)?domain\.ltd.*$ [NC] 
+RewriteRule \.(txt|key)$ /messageforcurious [L]
+
+# directory browsing
+Options All -Indexes
+
+#RewriteRule \.(gif|jpg|js|txt|css|key|png)$ /messageforcurious [L]

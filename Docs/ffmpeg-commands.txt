@@ -1,0 +1,26 @@
+ffmpeg -version
+
+-i is input
+$cmd = "C:/FFmpeg/bin/ffmpeg -i nesha.mp4 output.webm";  is extension change
+
+$cmd = "C:/FFmpeg/bin/ffmpeg -i nesha.mp4 -ss 00:01:00 -t 00:00:20 xxc.mp4";    is trim from 1-min length 20-sec
+
+openssl rand 16 > enc.key        is generate a key with openssl
+
+ffmpeg -y -i nesha.mp4 -hls_time 9 -hls_key_info_file enc.keyinfo -hls_playlist_type vod -hls_segment_filename "segmentNo%d.ts" index.m3u8
+
+Testing
+    ffmpeg -y -i ch_test.mp4 -hls_time 10 -hls_key_info_file enc.keyinfo -hls_playlist_type vod -hls_segment_filename "segmentNo%d.ts" index.m3u8
+    ffmpeg -y -i ch_test.mp4 -hls_time 10 -hls_playlist_type vod -hls_segment_filename "segmentNo%d.ts" index.m3u8
+    ffmpeg -progress block.txt -y -i ch_test.mp4 -hls_time 10 -hls_playlist_type vod -hls_segment_filename "segmentNo%d.ts" index.m3u8
+        // block.txt for progress calculation
+    ffmpeg -y -i ch_test.mp4 -hls_time 10 -hls_playlist_type vod -hls_segment_filename "segment_%03d.ts" index.m3u8
+        // segment_000.ts , segment_001.ts , segment_003.ts ...
+    ffmpeg -y -i ch_test.mp4 -hls_time 10 -hls_playlist_type vod -hls_segment_filename "segment_file_%v_%03d.ts" index.m3u8
+        // segment_file_0_000.ts , segment_file_0_001.ts , segment_file_0_003.ts ...
+    ffmpeg -y -i ch_test.mp4 -hls_time 10 -hls_playlist_type vod -hls_segment_filename "samrat/segment_%03d.ts" samrat/index.m3u8
+
+
+
+
+
