@@ -55,7 +55,7 @@
                 </div>
                 <a
                   data-hls-source-off="https://covidawareness.ca/hls/main/hls/ch_1/index.m3u8"
-                  data-hls-source="http://localhost/FFmpeg-Streamings/main/hls/ch_1/index.m3u8?v=2"
+                  data-hls-source="http://localhost/FFmpeg-Streamings/main/hls/ch_nesha/index.m3u8?v=2"
                   data-hls-section=".hls-section"
                   data-shareimage="images/author1.png"
                   class="html5lightbox venobox play-btn mb-2"
